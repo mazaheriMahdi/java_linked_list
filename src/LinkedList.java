@@ -31,11 +31,12 @@ public class LinkedList<T> {
     public String toString() {
         StringBuilder temp = new StringBuilder();
         Node last = head.next;
-        temp.append(head.data);
+        temp.append("[").append(head.data).append(" -> ");
         while (last.next != null){
-            temp.append(last.data);
+            temp.append(last.data.toString()).append(" -> ");
             last = last.next;
         }
+        temp.append("null]");
         return temp.toString();
     }
 
